@@ -1,0 +1,29 @@
+<form>
+  <div class="launch-filters">
+    <h2>Filters</h2>
+    <div class="filter-category">
+      <h3 class="filter-type">Launch Year</h3>
+      <div class="filter-values">
+        <button *ngFor="let each of filter.launch_year; trackBy: trackByFn;let i = index"
+          [ngClass]="{'my-class1': selected_launch_year == each}" class="filter-item"
+          (click)="filterData('launch_year',each, i)">{{each}}</button>
+      </div>
+    </div>
+    <div class="filter-category">
+      <h3 class="filter-type">Successful Launch</h3>
+      <div class="filter-values">
+        <button *ngFor="let each of filter.successful_launch; trackBy: trackByFn; let i = index" class="filter-item"
+          [ngClass]="{'my-class2': selected_successful_launch == each}"
+          (click)="filterData('successful_launch',each,i)">{{each}}</button>
+      </div>
+    </div>
+    <div class="filter-category">
+      <h3 class="filter-type">Successful Landing</h3>
+      <div class="filter-values">
+        <button class="filter-item" *ngFor="let each of filter.successful_landing; trackBy: trackByFn; let i = index"
+          [ngClass]="{'my-class3': selected_successful_landing == each}"
+          (click)="filterData('successful_landing',each,i)">{{each}}</button>
+      </div>
+    </div>
+  </div>
+</form>

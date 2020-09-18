@@ -1,0 +1,27 @@
+<div class="launch-item" class="launch-item">
+    <figure class="figure-item">
+        <img [src]="card.links.mission_patch_small" alt="" onerror="this.onerror=null;this.src='assets/images/thumbnail-default.png';" />
+    </figure>
+    <p ref="gf" class="launch-name">{{card.mission_name}} #{{card.flight_number}}</p>
+    <div>
+        <div class="launch-detail type-list">
+            <p class="detail-label">Mission Ids:</p>
+            <ul class="detail-value">
+                <li>{{card.mission_id || 'NA'}}</li>
+            </ul>
+        </div>
+
+        <div class="launch-detail">
+            <p class="detail-label">Launch Year:</p>
+            <p class="detail-value">{{card.launch_year || 'NA'}}</p>
+        </div>
+        <div class="launch-detail">
+            <p class="detail-label">Successful Launch:</p>
+            <p class="detail-value">{{card.launch_success}}</p>
+        </div>
+        <div class="launch-detail">
+            <p class="detail-label">Successful Landing:</p>
+            <p class="detail-value">{{card.landing_success }}</p>
+        </div>
+    </div>
+</div>
